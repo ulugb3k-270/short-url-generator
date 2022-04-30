@@ -1,9 +1,14 @@
+// STYLES
+import "./InputShortener.css"
+
+// REACT HOOKS
 import { useState } from "react"
 
 const InputShortener = ({ setInputValue }) => {
   const [value, setValue] = useState("");
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
     setInputValue(value);
     setValue("");
   }
@@ -11,15 +16,15 @@ const InputShortener = ({ setInputValue }) => {
   return (
     <div className="inputContainer">
       <h1>URL <span>Shortener</span></h1>
-      <div>
+      <form >
         <input
           type="text"
           placeholder="Paste a link to shorten it"
           value={value}
           onChange={e => setValue(e.target.value)}  
         />
-        <button onClick={handleClick}>shorten</button>
-      </div>
+        <button type="submit" onClick={handleClick}>Generate</button>
+      </form>
     </div>
   )
 }

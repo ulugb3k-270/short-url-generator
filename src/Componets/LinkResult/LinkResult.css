@@ -1,0 +1,34 @@
+/* Result */
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+.result p {
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  padding: 8px 10px;
+}
+.result button {
+  padding: 6px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: var(--primary-color);
+  border: none;
+}
+.result button.copied {
+  background: #fff;
+  color: var(--primary-color);
+}
+.noData {
+  color: #fff;
+  font-size: 10px;
+}
+
+
+@media (max-width: 500px) {
+  .result button {
+    padding: 4.6px 10px;
+  }
+}

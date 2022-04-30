@@ -1,3 +1,5 @@
+// STYLES
+import "./BackgroundAnimate.css";
 
 const BackgroundAnimate = () => {
   return (
@@ -16,7 +18,7 @@ const BackgroundAnimate = () => {
       <li></li>
       <li></li>
     </ul>
-  )
-}
+  );
+};
 
-export default BackgroundAnimate
+export default BackgroundAnimate;
