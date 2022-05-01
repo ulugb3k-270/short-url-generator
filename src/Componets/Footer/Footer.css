@@ -5,13 +5,14 @@
     bottom: 0;
     left: 0;
     z-index: 9999999;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(33, 33, 33, 1);
     display: flex;
     align-items: center;
     justify-content: space-around;
     transform: 1s;
     color: white;
     transition: .5s ease;
+    padding: 8px 0;
 }
 
 .footer p {
@@ -39,8 +40,3 @@
 }
 
 
-@media (max-width: 500px) {
-    .footer{
-        display: none;
-    }
-}
