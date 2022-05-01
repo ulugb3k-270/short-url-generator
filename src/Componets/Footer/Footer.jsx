@@ -20,7 +20,7 @@ const Footer = () => {
       <p>
         By continuing to use our site, you agree to our Terms of Service and
         Privacy Policy. You can learn more about how we use cookies by reviewing
-        our Privacy Policy. <br /> Creator:{" "}
+        our Privacy Policy. <br />  Creator:{" "}
         <a
           href="https://ulugbekasadov.uz"
           target="_blank"

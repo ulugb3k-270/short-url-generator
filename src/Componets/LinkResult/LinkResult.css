@@ -3,12 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 10px;
 }
 .result p {
   color: #fff;
   border: 1px solid var(--primary-color);
   padding: 8px 10px;
+  width: 311px;
 }
 .result button {
   padding: 6px 10px;
