@@ -13,6 +13,7 @@ import UploadPhotos from "./Componets/UploadPhotos";
 
 // react-router-dom
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./Componets/Header/Header";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -44,6 +45,7 @@ function App() {
             path="/"
             element={
               <>
+                <Header shortLink="active" />
                 <InputShortener setInputValue={setInputValue} />
                 <BackgroundAnimate />
                 <LinkResult inputValue={inputValue} />
@@ -52,12 +54,12 @@ function App() {
             }
           />
           <Route
-            path="/img-conventer"
+            path="/img-to-url"
             element={
               <>
+                <Header imgToLink="active" />
                 <UploadPhotos />
                 <BackgroundAnimate />
-                <LinkResult inputValue={inputValue} />
               </>
             }
           />

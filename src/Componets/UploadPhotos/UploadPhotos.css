@@ -1,6 +1,7 @@
 .upload__photos-title {
   color: white;
   font-size: 3.5rem;
+  text-align: center;
 }
 
 .upload__photos-title > span {
@@ -40,6 +41,8 @@
 
 .upload__photos-box > img {
   max-width: 365px;
+  max-height: 300px;
+  object-fit: contain;
   margin: 0 auto;
   display: block;
 }

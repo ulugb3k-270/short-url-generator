@@ -1,16 +1,21 @@
 // STYLES
-import "./LinkResult.css"
+import "./LinkResult.css";
 
 // AXIOS
 import axios from "axios";
 
 // REACT HOOKS
 import { useEffect, useState } from "react";
-import {FileCopy} from "@material-ui/icons"
+
+//MUI ICONS
+import { FileCopy } from "@material-ui/icons";
 
 // LIBs
 import CopyToClipboard from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
+
+// COMPONENTS
+import Loader from "../Loader";
 
 const LinkResult = ({ inputValue }) => {
   const [shortenLink, setShortenLink] = useState("");
@@ -52,7 +57,7 @@ const LinkResult = ({ inputValue }) => {
   }, [inputValue]);
 
   if (loading) {
-    return <p className="noData">Loading...</p>;
+    return <Loader />;
   }
   if (error) {
     return <p className="noData">Something went wrong :(</p>;
@@ -80,7 +85,6 @@ const LinkResult = ({ inputValue }) => {
             draggable
             pauseOnHover
           />
-          
         </div>
       )}
     </>
