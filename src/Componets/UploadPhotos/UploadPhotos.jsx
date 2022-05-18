@@ -14,7 +14,8 @@ import { getDownloadURL, ref, uploadString } from "firebase/storage";
 
 // LIBs
 import CopyToClipboard from "react-copy-to-clipboard";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { notify } from "../../reusableFunctions/notify";
 
 // COMPONENTS
 import Loader from "../Loader";
@@ -24,19 +25,6 @@ const UploadPhotos = () => {
   const [selectedFile, setSelectedFile] = useState("");
   const [urlAfterUploaded, setUrlAfterUploaded] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const notify = () =>
-    toast.success("Copied to Clipboard!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      draggablePercent: 30,
-    });
 
   const addPhotos = (e) => {
     const reader = new FileReader();
@@ -74,20 +62,29 @@ const UploadPhotos = () => {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   };
 
-  console.log(urlAfterUploaded);
-
   return (
     <div className="upload__photos">
       <h2 className="upload__photos-title">
         Image to <span>URL</span>
       </h2>
       <div className="upload__photos-box">
-        <input hidden type="file" ref={selectedFileRef} onChange={addPhotos} />
+        <input
+          hidden
+          accept="image/png, image/gif, image/jpeg, image/jpg"
+          type="file"
+          ref={selectedFileRef}
+          onChange={addPhotos}
+        />
         {!selectedFile ? (
-          <CloudUploadRounded
-            onClick={() => selectedFileRef.current.click()}
-            className="upload__photos-box-icon"
-          />
+          <>
+            <CloudUploadRounded
+              onClick={() => selectedFileRef.current.click()}
+              className="upload__photos-box-icon"
+            />
+            <p onClick={() => selectedFileRef.current.click()}>
+              Click the icon to choose photo
+            </p>
+          </>
         ) : (
           <>
             <img src={selectedFile} alt="" />

@@ -10,6 +10,7 @@ import Footer from "./Componets/Footer";
 import InputShortener from "./Componets/InputShortener";
 import LinkResult from "./Componets/LinkResult";
 import UploadPhotos from "./Componets/UploadPhotos";
+import Version from "./Componets/Version";
 
 // react-router-dom
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
@@ -49,6 +50,7 @@ function App() {
                 <InputShortener setInputValue={setInputValue} />
                 <BackgroundAnimate />
                 <LinkResult inputValue={inputValue} />
+                <Version />
                 <Footer />
               </>
             }
@@ -60,6 +62,7 @@ function App() {
                 <Header imgToLink="active" />
                 <UploadPhotos />
                 <BackgroundAnimate />
+                <Version />
               </>
             }
           />

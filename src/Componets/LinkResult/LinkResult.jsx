@@ -12,7 +12,8 @@ import { FileCopy } from "@material-ui/icons";
 
 // LIBs
 import CopyToClipboard from "react-copy-to-clipboard";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { notify } from "../../reusableFunctions/notify";
 
 // COMPONENTS
 import Loader from "../Loader";
@@ -21,19 +22,6 @@ const LinkResult = ({ inputValue }) => {
   const [shortenLink, setShortenLink] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
-  const notify = () =>
-    toast.success("Copied to Clipboard!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      draggablePercent: 30,
-    });
 
   const fetchData = async () => {
     try {
