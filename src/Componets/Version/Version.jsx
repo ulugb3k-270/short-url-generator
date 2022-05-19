@@ -33,11 +33,11 @@ const Version = () => {
                 >
                   <p>New Features: </p>
                   {update.features.map((_, i) => (
-                    <p style={{ marginTop: "-10px" }}>{update.features[i]}</p>
+                    <p key={i} style={{ marginTop: "-10px" }}>{update.features[i]}</p>
                   ))}
                   <p>Bug Fixes: </p>
                   {update.bugs.map((_, i) => (
-                    <p style={{ marginTop: "-10px" }}>{update.bugs[i]}</p>
+                    <p key={i} style={{ marginTop: "-10px" }}>{update.bugs[i]}</p>
                   ))}
                 </div>
               </li>

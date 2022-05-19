@@ -1,61 +1,65 @@
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .version {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 2;
-    color: white;
+    display: none;
   }
+}
 
-  .version > p {
-    color: rgb(113 114 122);
-    margin-left: 10px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.2s ease-in-out;
-    width: fit-content;
-  }
+.version {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  color: white;
+}
 
-  .version > p:hover {
-    color: white;
-  }
+.version > p {
+  color: rgb(113 114 122);
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+}
 
-  .version__popup {
-    position: fixed;
-    width: 50vw;
-    max-height: 50vh;
-    height: 100%;
-    top: 23%;
-    left: 23%;
-    background: rgba(38, 38, 38);
-    overflow-y: scroll;
-    border-radius: 10px;
-    padding: 0 40px 0 0;
-  }
+.version > p:hover {
+  color: white;
+}
 
-  .version__popup::-webkit-scrollbar {
-    width: 8px;
-    background: unset;
+.version__popup {
+  position: fixed;
+  width: 50vw;
+  max-height: 50vh;
+  height: 100%;
+  top: 23%;
+  left: 23%;
+  background: rgba(38, 38, 38);
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 0 40px 0 0;
+}
 
-    border-radius: 10px;
-  }
+.version__popup::-webkit-scrollbar {
+  width: 8px;
+  background: unset;
 
-  .version__popup::-webkit-scrollbar-thumb {
-    background-color: rgb(113 114 122);
-    border-radius: 10px;
-  }
+  border-radius: 10px;
+}
 
-  .version__item-header {
-    display: flex;
-    justify-content: space-between;
-  }
+.version__popup::-webkit-scrollbar-thumb {
+  background-color: rgb(113 114 122);
+  border-radius: 10px;
+}
 
-  .version__item-header {
-    color: rgb(113 114 122);
-  }
+.version__item-header {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .version__popup > svg {
-    margin: 20px 20px -20px 20px !important;
-    cursor: pointer;
-  }
+.version__item-header {
+  color: rgb(113 114 122);
+}
+
+.version__popup > svg {
+  margin: 20px 20px -20px 20px !important;
+  cursor: pointer;
 }
