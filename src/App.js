@@ -15,6 +15,7 @@ import Version from "./Componets/Version";
 // react-router-dom
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Componets/Header/Header";
+import QRGenerator from "./pages/qr-generator/QRGenerator";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -61,6 +62,18 @@ function App() {
               <>
                 <Header imgToLink="active" />
                 <UploadPhotos />
+                <BackgroundAnimate />
+                <Version />
+              </>
+            }
+          />
+
+          <Route
+            path="/qr-generator"
+            element={
+              <>
+                <Header qrGenerator="active" />
+                <QRGenerator />
                 <BackgroundAnimate />
                 <Version />
               </>
