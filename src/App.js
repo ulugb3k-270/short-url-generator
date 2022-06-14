@@ -11,11 +11,11 @@ import InputShortener from "./Componets/InputShortener";
 import LinkResult from "./Componets/LinkResult";
 import UploadPhotos from "./Componets/UploadPhotos";
 import Version from "./Componets/Version";
+import QRGenerator from "./pages";
 
 // react-router-dom
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Componets/Header/Header";
-import QRGenerator from "./pages/qr-generator/QRGenerator";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
