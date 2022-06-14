@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const notify = () =>
   toast.success("Copied to Clipboard!", {
     position: "top-right",
-    autoClose: 2000,
+    autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
