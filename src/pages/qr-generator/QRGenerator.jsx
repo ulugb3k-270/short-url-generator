@@ -4,14 +4,21 @@ import "./QRGenerator.css";
 // HOOK
 import { useState } from "react";
 
-//Libs
-import QRCode from "react-qr-code";
+// COMPONENTS
+import Loader from "../../Componets/Loader";
 
 const QRGenerator = () => {
   const [qrLinkInput, setQrLinkInput] = useState("");
+  const [qrCode, setQrCode] = useState("");
+  const [loader, setLoader] = useState(false);
 
-  const generateQR = (e) => {
+  const generateQR = async (e) => {
     e.preventDefault();
+    setLoader(true);
+    setQrCode(
+      `https://api.qrserver.com/v1/create-qr-code/?size=${256}x${256}&data=${qrLinkInput}`
+    );
+    setLoader(false);
   };
   return (
     <div className="qr">
@@ -28,15 +35,25 @@ const QRGenerator = () => {
           onChange={(e) => setQrLinkInput(e.target.value)}
           placeholder="Paste a link to generate QR"
         />
+        <button type="submit" className="qr__form-button">
+          Generate
+        </button>
       </form>
 
-      {qrLinkInput && (
+      {qrCode && (
         <div>
           <div className="qr__image-box">
-              <QRCode download={true} value={qrLinkInput} className="qr__image" />
-           
+            {loader ? <Loader /> : <img src={qrCode} alt="qrCode" />}
           </div>
-          <button className="qr__form-button">DOWNLOAD</button>
+          <a
+            href={qrCode}
+            target="_blank"
+            rel="noreferrer"
+            className="qr__form-button full"
+            download={true}
+          >
+            DOWNLOAD
+          </a>
         </div>
       )}
     </div>

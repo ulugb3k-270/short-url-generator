@@ -1,19 +1,19 @@
-.qr__title{
-    color: white;
-    font-size: 3.5rem;
-    text-align: center;
+.qr__title {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
-.qr__title > span{
-    color: var(--primary-color);
+.qr__title > span {
+  color: var(--primary-color);
 }
 
-.qr__form{
-    display: flex;
-    margin-bottom: 2rem;
+.qr__form {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
-.qr__form-input{
+.qr__form-input {
   width: 100%;
   padding: 0.8rem 0.2rem;
   text-indent: 1rem;
@@ -24,26 +24,33 @@
   border-bottom-left-radius: 3px;
 }
 
-.qr__form-button{
-    padding: 0 1rem;
-    height: 3rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    color: #fff;
-    background-color: var(--primary-color);
-    border: none;
-    cursor: pointer;
-    width: 100%;
+.qr__form-button {
+  padding: 0 1rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
 }
 
-.qr__image-box{
-    padding: 20px;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.qr__image-box {
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr__form-button.full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92.3%;
+  border-top-right-radius: 0;
 }
