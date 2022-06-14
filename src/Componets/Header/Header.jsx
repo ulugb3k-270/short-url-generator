@@ -4,7 +4,7 @@ import "./Header.css";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 
-const Header = ({ shortLink, imgToLink,qrGenerator }) => {
+const Header = ({ shortLink, imgToLink, qrGenerator }) => {
   return (
     <header className="header">
       <ul className="header__list">
@@ -19,8 +19,11 @@ const Header = ({ shortLink, imgToLink,qrGenerator }) => {
           </Link>
         </li>
         <li className="header__item">
-          <Link to="/qr-generator" className={`header__link ${qrGenerator || ""}`}>
-            QR code generator
+          <Link
+            to="/qr-generator"
+            className={`header__link ${qrGenerator || ""}`}
+          >
+            QR code generator (TEST)
           </Link>
         </li>
       </ul>
