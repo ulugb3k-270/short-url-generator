@@ -7,6 +7,9 @@ import { useState } from "react";
 // COMPONENTS
 import Loader from "../../Componets/Loader";
 
+// LIBS
+import { saveAs } from "file-saver";
+
 const QRGenerator = () => {
   const [qrLinkInput, setQrLinkInput] = useState("");
   const [qrCode, setQrCode] = useState("");
@@ -20,6 +23,7 @@ const QRGenerator = () => {
     );
     setLoader(false);
   };
+
   return (
     <div className="qr">
       <h2 className="qr__title">
@@ -45,15 +49,12 @@ const QRGenerator = () => {
           <div className="qr__image-box">
             {loader ? <Loader /> : <img src={qrCode} alt="qrCode" />}
           </div>
-          <a
-            href={qrCode}
-            target="_blank"
-            rel="noreferrer"
+          <button
             className="qr__form-button full"
-            download={true}
+            onClick={() => saveAs(qrCode, "image.png")}
           >
             DOWNLOAD
-          </a>
+          </button>
         </div>
       )}
     </div>

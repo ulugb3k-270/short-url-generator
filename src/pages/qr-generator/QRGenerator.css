@@ -48,9 +48,5 @@
 }
 
 .qr__form-button.full {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 92.3%;
-  border-top-right-radius: 0;
+  width: 100%;
 }
